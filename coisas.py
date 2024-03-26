@@ -5,18 +5,23 @@ class Usuario:
         self.senha = passoword
 
     def cadastro(self):
-        v = input('DESEJA FAZER O CADRASTO DE QUAL USUARIO'
-                  '(1)ALUNO'
-                  '(2)ADM')
+        v = input('DESEJA FAZER O CADRASTO DE QUAL USUARIO ?\n'
+                  '(1)ALUNO\n'
+                  '(2)ADM\n')
         if v == '1':
-            x = input("Informe o nome do usuario")
-            y = input("Informe a matricula ")
-            z = input("Informe a senha do usuário ")
-            return Usuario(x, y, z)
-        else:
-            return None
+            usu = Usuario(input("Informe o nome do usuário: "), input("Informe a matrícula: "), input("Informe a senha: "))
+user1 = cadastro()
 
 
-usu = Usuario(input("Informe o nome do usuário: "), input("Informe a matrícula: "), input("Informe a senha: "))
+        # aluno = []
+        #
+        # aluno.append(usu)
+        # print("Lista de alunos:")
+        #     for a in aluno:
+        #  print(f"Nome: {a.nome}, Matrícula: {a.mat}, Senha: {a.senha}")
 
-usu.cadastro()
+adm = []
+
+
+
+
