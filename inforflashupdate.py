@@ -4,16 +4,35 @@ class Usuario:
         self.mat = matricula
         self.senha = password
         self.tipo = '1'
-        self.opcao()
+        self.logado = False
         # self.login()
+        # self.interfaceadm()
 
-        # self.cadastro()
-    def opcao(self):
-        menu = input('(1)fazer cadastro de novo usuário:\n'
-                     '(2)colocar eventos:\n')
+# self.cadastro()
 
+    def login(self):
+        print('|Login de usuário|  ')
+        u = input('informe o nome de usuário:')
+        m = input('Informe a matricula:')
+        s = input('Informe a sua senha:')
+        if self.senha == s and self.mat == m and self.nome == u:
+            self.logado = True#aqui ele ta vendo se o usuário tem cadastro no sistema:
+            self.interfaceadm()
+
+    def interfaceadm(self):
+        print('|Interface administrativa|  \n'
+              '== Selecione uma opção ==')
+        menu = input('(1)Adicionar eventos:\n'
+                     '(2)Cadastrar usuário:\n')
+
+        # if menu == '2' and self.logado:
+        #     self.cadastro()  # aqui eu quero que chame a função cadastro de usuário
         if menu == '1':
+            pass      #
+        elif menu == '2': #and self.logado:
             self.cadastro()
+        # else:
+        #     print('está certo')
 
     def cadastro(self):
         # self.none = input("")
@@ -34,7 +53,7 @@ alunos, professor = [], []
 
 while True:
     usu = Usuario()     # aqui vai pro método construtor
-    usu.cadastro()      # aqui define que o cadastro será feito dentro da função cadastro
+    # usu.cadastro()      # aqui define que o cadastro será feito dentro da função cadastro
     if usu.tipo == '1':
         alunos.append(usu)
     elif usu.tipo == '2':
@@ -50,20 +69,4 @@ for i in alunos:
 for i in professor:
     print(f"Nome: {i.nome}, Matrícula: {i.mat}, Senha: {i.senha}")
 
-
-def login():
-    print('Login de usuário')
-    u = input('informe o nome de usuário:')
-    m = input('Informe a matricula:')
-    s = input('Informe a sua senha:')
-
-
-def opcao():
-    menu = input('(1)fazer cadastro de novo usuário:\n'
-                 '(2)colocar eventos:\n')
-
-    if menu == '1':
-        Usuario.cadastro()
-
-    # aqui eu quero que chame a função cadastro de usuário
 
