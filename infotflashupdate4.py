@@ -27,6 +27,12 @@ class Usuario:
         m = input('Informe a matrícula:')
         s = input('Informe a senha:')
 
+        for i in usuarios:
+            if i.nome == u and i.mat == m and i.senha == s:
+                i.logado = True
+                self.interfaceadm()
+            else:
+                self.interfacealuno()
 
         # if user1.nome == u and user1.mat == m and user1.senha == s:
         #     user1.logado = True
@@ -115,7 +121,7 @@ class Usuario:
 user1 = Usuario('levy', '11', "2")  # usuário adm
 user2 = Usuario('ana', '22', '3')
 # Lista de usuários
-usuariospd = [user1, user2]
+usuarios = [user1, user2]
 
 # Verificando as credenciais e direcionando para a interface apropriada
 user1.autenticar()
