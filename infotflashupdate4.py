@@ -27,6 +27,7 @@ class Usuario:
         m = input('Informe a matrícula:')
         s = input('Informe a senha:')
 
+
         # if user1.nome == u and user1.mat == m and user1.senha == s:
         #     user1.logado = True
         #     self.interfaceadm()
