@@ -22,15 +22,15 @@ class Usuario:
 
     def autenticar(self):
         print('\n|SEJA BEM VINDO AO INFORFLASH|\n'
-              'INFORME NOS CAMPOS ABAIXO AS INFORMAÇÕES NECESSÁRIAS PARA REALIZAR O LOGIN')
+              'INFORME NOS CAMPOS ABAIXO AS INFORMAÇÕES NECESSÁRIAS PARA REALIZAR O LOGIN')     #fazer alguns ajustes
         u = input('Informe o nome de usuário:')
         m = input('Informe a matrícula:')
         s = input('Informe a senha:')
 
         for i in usuarios:
             if i.nome == u and i.mat == m and i.senha == s:
-                i.logado = True
                 self.interfaceadm()
+                break
             else:
                 self.interfacealuno()
 
