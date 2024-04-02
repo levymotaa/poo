@@ -21,24 +21,19 @@ class Estudante:
     def __init__(self, user, mat, password ):
         self.username = user
         self.matricula = mat
-        self.config --
+        self.senha = password
+
 
 
 
     def __str__(self):
-        return f"Nome: {self.nome}\nIdade: {self.idade}\nMatrícula: {self.matricula}"
+        return f"Nome: {self.username}\nIdade: {self.matricula}\nMatrícula: {self.senha}"
 
 # Exemplo de uso
-estudante1 = Estudante("Virginia", 20, "2022001")
-estudante2 = Estudante("Vitor", 22, "2022002")
+estudante1 = Estudante("Virginia", 20, "virginia")
+estudante2 = Estudante("Vitor", 22, "virginia")
+print(estudante1.username)
 
-print(estudante1)
-print("\n")
-
-estudante1.estudar("TPS")
-print("\n")
-
-print(estudante2)
-print("\n")
-
-estudante2.estudar("POO")
+# user1.nome = "levy "
+# user1.fone = "63 9897966868"
+# user1.livros_emprestados = ("Don casmuro ")
