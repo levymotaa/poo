@@ -5,18 +5,14 @@ class Usuario:
         self.senha = password
         self.tipo = '1'
         self.logado = False
-        # self.login()
-        # self.interfaceadm()
 
-# self.cadastro()
-
-    def login(self):
+    def autenticar(self):
         print('|Login de usuário|  ')
         u = input('informe o nome de usuário:')
         m = input('Informe a matricula:')
         s = input('Informe a sua senha:')
         if self.senha == s and self.mat == m and self.nome == u:
-            self.logado = True#aqui ele ta vendo se o usuário tem cadastro no sistema:
+            self.logado = True      #aqui ele ta vendo se o usuário tem cadastro no sistema:
             self.interfaceadm()
 
     def interfaceadm(self):
@@ -25,17 +21,13 @@ class Usuario:
         menu = input('(1)Adicionar eventos:\n'
                      '(2)Cadastrar usuário:\n')
 
-        # if menu == '2' and self.logado:
-        #     self.cadastro()  # aqui eu quero que chame a função cadastro de usuário
         if menu == '1':
-            pass      #
-        elif menu == '2': #and self.logado:
+            pass
+        elif menu == '2':
             self.cadastro()
-        # else:
-        #     print('está certo')
 
     def cadastro(self):
-        # self.none = input("")
+
         v = input('DESEJA FAZER O CADASTRO DE QUAL USUÁRIO: \n'
                   '(1) ALUNO:\n'
                   '(2) ADM:\n')
@@ -49,11 +41,12 @@ class Usuario:
             self.mat = input("Crie uma matricula: ")
             self.senha = input("Crie uma senha:")
 
+
 alunos, professor = [], []
 
 while True:
     usu = Usuario()     # aqui vai pro método construtor
-    # usu.cadastro()      # aqui define que o cadastro será feito dentro da função cadastro
+        #usu.cadastro()      # aqui define que o cadastro será feito dentro da função cadastro
     if usu.tipo == '1':
         alunos.append(usu)
     elif usu.tipo == '2':
